@@ -1,0 +1,1488 @@
+/// @use-src 7:"lib/openzeppelin-contracts/contracts/access/Ownable.sol", 15:"lib/openzeppelin-contracts/contracts/utils/Context.sol", 22:"lib/sudoswap/src/ILSSVMPairFactoryLike.sol", 29:"lib/sudoswap/src/LSSVMPairFactory.sol"
+object "LSSVMPairFactory_28788" {
+    code {
+        {
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let _1 := memoryguard(0x0100)
+            if callvalue() { revert(0, 0) }
+            let programSize := datasize("LSSVMPairFactory_28788")
+            let argSize := sub(codesize(), programSize)
+            let newFreePtr := add(_1, and(add(argSize, 31), not(31)))
+            if or(gt(newFreePtr, sub(shl(64, 1), 1)), lt(newFreePtr, _1))
+            {
+                mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ shl(224, 0x4e487b71))
+                mstore(4, 0x41)
+                revert(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 0x24)
+            }
+            mstore(64, newFreePtr)
+            codecopy(_1, programSize, argSize)
+            if slt(sub(add(_1, argSize), _1), 192)
+            {
+                revert(/** @src -1:-1:-1 */ 0, 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let value := mload(_1)
+            let _2 := sub(shl(160, 1), 1)
+            if iszero(eq(value, and(value, _2)))
+            {
+                revert(/** @src -1:-1:-1 */ 0, 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let value_1 := mload(add(_1, 32))
+            if iszero(eq(value_1, and(value_1, _2)))
+            {
+                revert(/** @src -1:-1:-1 */ 0, 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let value_2 := mload(add(_1, 64))
+            if iszero(eq(value_2, and(value_2, _2)))
+            {
+                revert(/** @src -1:-1:-1 */ 0, 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let value_3 := mload(add(_1, 96))
+            if iszero(eq(value_3, and(value_3, _2)))
+            {
+                revert(/** @src -1:-1:-1 */ 0, 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let value_4 := mload(add(_1, 128))
+            let _3 := and(value_4, _2)
+            if iszero(eq(value_4, _3))
+            {
+                revert(/** @src -1:-1:-1 */ 0, 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let value_5 := mload(add(_1, 160))
+            let _4 := sload(/** @src -1:-1:-1 */ 0)
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let _5 := not(sub(shl(160, 1), 1))
+            sstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ or(and(_4, _5), /** @src 15:719:729  "msg.sender" */ caller()))
+            /// @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)"
+            let _6 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+            /// @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)"
+            log3(_6, /** @src -1:-1:-1 */ 0, /** @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)" */ 0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(_4, _2), /** @src 15:719:729  "msg.sender" */ caller())
+            /// @src 29:3358:3404  "enumerableETHTemplate = _enumerableETHTemplate"
+            mstore(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 128, /** @src 29:3358:3404  "enumerableETHTemplate = _enumerableETHTemplate" */ value)
+            /// @src 29:3414:3474  "missingEnumerableETHTemplate = _missingEnumerableETHTemplate"
+            mstore(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 160, /** @src 29:3414:3474  "missingEnumerableETHTemplate = _missingEnumerableETHTemplate" */ value_1)
+            /// @src 29:3484:3534  "enumerableERC20Template = _enumerableERC20Template"
+            mstore(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 192, /** @src 29:3484:3534  "enumerableERC20Template = _enumerableERC20Template" */ value_2)
+            /// @src 29:3544:3608  "missingEnumerableERC20Template = _missingEnumerableERC20Template"
+            mstore(224, value_3)
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            sstore(1, or(and(sload(1), _5), _3))
+            /// @src 29:1763:1770  "0.10e18"
+            if /** @src 29:3681:3723  "_protocolFeeMultiplier <= MAX_PROTOCOL_FEE" */ gt(value_5, /** @src 29:1763:1770  "0.10e18" */ 0x016345785d8a0000)
+            {
+                mstore(_6, shl(229, 4594637))
+                mstore(add(_6, 4), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32)
+                /// @src 29:1763:1770  "0.10e18"
+                mstore(add(_6, 36), 13)
+                mstore(add(_6, 68), "Fee too large")
+                revert(_6, 100)
+            }
+            sstore(/** @src 29:3751:3797  "protocolFeeMultiplier = _protocolFeeMultiplier" */ 0x02, /** @src 29:1763:1770  "0.10e18" */ value_5)
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            let _7 := mload(64)
+            let _8 := datasize("LSSVMPairFactory_28788_deployed")
+            codecopy(_7, dataoffset("LSSVMPairFactory_28788_deployed"), _8)
+            setimmutable(_7, "27858", mload(128))
+            setimmutable(_7, "27861", mload(160))
+            setimmutable(_7, "27864", mload(192))
+            setimmutable(_7, "27867", mload(/** @src 29:3544:3608  "missingEnumerableERC20Template = _missingEnumerableERC20Template" */ 224))
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            return(_7, _8)
+        }
+    }
+    /// @use-src 7:"lib/openzeppelin-contracts/contracts/access/Ownable.sol", 15:"lib/openzeppelin-contracts/contracts/utils/Context.sol", 21:"lib/sudoswap/lib/solmate/src/utils/SafeTransferLib.sol", 29:"lib/sudoswap/src/LSSVMPairFactory.sol", 37:"lib/sudoswap/src/lib/LSSVMPairCloner.sol"
+    object "LSSVMPairFactory_28788_deployed" {
+        code {
+            {
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                mstore(64, 128)
+                if iszero(lt(calldatasize(), 4))
+                {
+                    switch shr(224, calldataload(0))
+                    case 0x004885ea {
+                        external_fun_missingEnumerableETHTemplate()
+                    }
+                    case 0x08f25a8f { external_fun_isPair() }
+                    case 0x1cad5a40 { external_fun_depositERC20() }
+                    case 0x1ce4c78b {
+                        external_fun_protocolFeeMultiplier()
+                    }
+                    case 0x1fba95e8 { external_fun_callAllowed() }
+                    case 0x2cdb394b { external_fun_depositNFTs() }
+                    case 0x4bf107c1 {
+                        external_fun_setBondingCurveAllowed()
+                    }
+                    case 0x4c6bc433 {
+                        external_fun_missingEnumerableERC20Template()
+                    }
+                    case 0x514f0330 {
+                        external_fun_changeProtocolFeeRecipient()
+                    }
+                    case 0x59722caa {
+                        external_fun_createPairERC20()
+                    }
+                    case 0x64df049e {
+                        external_fun_protocolFeeRecipient()
+                    }
+                    case 0x6cc88edb {
+                        external_fun_setRouterAllowed()
+                    }
+                    case 0x715018a6 {
+                        external_fun_renounceOwnership()
+                    }
+                    case 0x8da5cb5b { external_fun_owner() }
+                    case 0x9c3c11d2 {
+                        external_fun_changeProtocolFeeMultiplier()
+                    }
+                    case 0xa427f1ad {
+                        external_fun_enumerableERC20Template()
+                    }
+                    case 0xa82719c8 {
+                        external_fun_bondingCurveAllowed()
+                    }
+                    case 0xa93ec68b { external_fun_routerStatus() }
+                    case 0xad2e5770 {
+                        external_fun_enumerableETHTemplate()
+                    }
+                    case 0xb483eddc {
+                        external_fun_withdrawETHProtocolFees()
+                    }
+                    case 0xcc5bc20b {
+                        external_fun_withdrawERC20ProtocolFees()
+                    }
+                    case 0xce9c095d { external_fun_createPairETH() }
+                    case 0xebd0f693 { external_fun_setCallAllowed() }
+                    case 0xf2fde38b {
+                        external_fun_transferOwnership()
+                    }
+                }
+                if iszero(calldatasize()) { stop() }
+                revert(0, 0)
+            }
+            function abi_decode(headStart, dataEnd)
+            {
+                if slt(sub(dataEnd, headStart), 0) { revert(0, 0) }
+            }
+            function convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(value) -> converted
+            {
+                converted := and(value, sub(shl(160, 1), 1))
+            }
+            function external_fun_missingEnumerableETHTemplate()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let memPos := mload(64)
+                mstore(memPos, and(/** @src 29:1872:1947  "LSSVMPairMissingEnumerableETH public immutable missingEnumerableETHTemplate" */ loadimmutable("27861"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)))
+                return(memPos, 32)
+            }
+            function validator_revert_address(value)
+            {
+                if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }
+            }
+            function external_fun_isPair()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 64)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                let value_1 := calldataload(36)
+                if iszero(lt(value_1, 4))
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let ret := fun_isPair(value, value_1)
+                let memPos := mload(64)
+                mstore(memPos, iszero(iszero(ret)))
+                return(memPos, 32)
+            }
+            function external_fun_depositERC20()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 96)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                let value_1 := calldataload(36)
+                validator_revert_address(value_1)
+                /// @src 29:17300:17306  "amount"
+                fun_safeTransferFrom(value, /** @src 29:17277:17287  "msg.sender" */ caller(), /** @src 29:17300:17306  "amount" */ value_1, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ calldataload(68))
+                /// @src 29:17334:17452  "isPair(recipient, PairVariant.ENUMERABLE_ERC20) ||..."
+                let expr := /** @src 29:17334:17381  "isPair(recipient, PairVariant.ENUMERABLE_ERC20)" */ fun_isPair_8358(value_1)
+                /// @src 29:17334:17452  "isPair(recipient, PairVariant.ENUMERABLE_ERC20) ||..."
+                if iszero(expr)
+                {
+                    expr := /** @src 29:17397:17452  "isPair(recipient, PairVariant.MISSING_ENUMERABLE_ERC20)" */ fun_isPair_8359(value_1)
+                }
+                /// @src 29:17317:17596  "if (..."
+                if expr
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    let _1 := sub(shl(160, 1), 1)
+                    /// @src 29:17490:17523  "LSSVMPairERC20(recipient).token()"
+                    let _2 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                    /// @src 29:17490:17523  "LSSVMPairERC20(recipient).token()"
+                    mstore(_2, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(225, 0x7e062a35))
+                    /// @src 29:17490:17523  "LSSVMPairERC20(recipient).token()"
+                    let _3 := staticcall(gas(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:17490:17515  "LSSVMPairERC20(recipient)" */ value_1, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1), /** @src 29:17490:17523  "LSSVMPairERC20(recipient).token()" */ _2, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 4, /** @src 29:17490:17523  "LSSVMPairERC20(recipient).token()" */ _2, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32)
+                    /// @src 29:17490:17523  "LSSVMPairERC20(recipient).token()"
+                    if iszero(_3) { revert_forward() }
+                    let expr_address := /** @src -1:-1:-1 */ 0
+                    /// @src 29:17490:17523  "LSSVMPairERC20(recipient).token()"
+                    if _3
+                    {
+                        let _4 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32
+                        /// @src 29:17490:17523  "LSSVMPairERC20(recipient).token()"
+                        if gt(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _4, /** @src 29:17490:17523  "LSSVMPairERC20(recipient).token()" */ returndatasize()) { _4 := returndatasize() }
+                        finalize_allocation(_2, _4)
+                        expr_address := abi_decode_contract_ERC20_fromMemory(_2, add(_2, _4))
+                    }
+                    /// @src 29:17477:17586  "if (token == LSSVMPairERC20(recipient).token()) {..."
+                    if /** @src 29:17481:17523  "token == LSSVMPairERC20(recipient).token()" */ eq(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:17481:17523  "token == LSSVMPairERC20(recipient).token()" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1), and(/** @src 29:17481:17523  "token == LSSVMPairERC20(recipient).token()" */ expr_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1))
+                    /// @src 29:17477:17586  "if (token == LSSVMPairERC20(recipient).token()) {..."
+                    {
+                        /// @src 29:17548:17571  "TokenDeposit(recipient)"
+                        let _5 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                        /// @src 29:17548:17571  "TokenDeposit(recipient)"
+                        log1(_5, sub(abi_encode_contract_LSSVMPairERC20(_5, value_1), _5), 0x831faf3fbb75c9fc66e318de7e95905d24c0430822da168c1c06fd49cba8f5f7)
+                    }
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function external_fun_protocolFeeMultiplier()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let _1 := sload(/** @src 29:2206:2251  "uint256 public override protocolFeeMultiplier" */ 2)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let memPos := mload(64)
+                mstore(memPos, _1)
+                return(memPos, 32)
+            }
+            function mapping_index_access_mapping_address_bool_of_address(key) -> dataSlot
+            {
+                mstore(0, and(key, sub(shl(160, 1), 1)))
+                mstore(0x20, /** @src 29:7739:7758  "bondingCurveAllowed" */ 0x03)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                dataSlot := keccak256(0, 0x40)
+            }
+            function mapping_index_access_mapping_address_bool_of_address_8368(key) -> dataSlot
+            {
+                mstore(0, and(key, sub(shl(160, 1), 1)))
+                mstore(0x20, /** @src 29:14077:14089  "routerStatus" */ 0x05)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                dataSlot := keccak256(0, 0x40)
+            }
+            function external_fun_callAllowed()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(value, sub(shl(160, 1), 1)))
+                mstore(32, 4)
+                let value_1 := and(sload(keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 0x40)), 0xff)
+                let memPos := mload(0x40)
+                mstore(memPos, iszero(iszero(value_1)))
+                return(memPos, 32)
+            }
+            function abi_decode_array_uint256_dyn_calldata(offset, end) -> arrayPos, length
+            {
+                if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }
+                length := calldataload(offset)
+                if gt(length, 0xffffffffffffffff) { revert(0, 0) }
+                arrayPos := add(offset, 0x20)
+                if gt(add(add(offset, shl(5, length)), 0x20), end) { revert(0, 0) }
+            }
+            function external_fun_depositNFTs()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 96)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := 4
+                let value := calldataload(_1)
+                validator_revert_address(value)
+                let offset := calldataload(36)
+                if gt(offset, 0xffffffffffffffff)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value1, value2 := abi_decode_array_uint256_dyn_calldata(add(_1, offset), calldatasize())
+                let value_1 := calldataload(68)
+                validator_revert_address(value_1)
+                /// @src 29:16455:16464  "uint256 i"
+                let var_i := /** @src -1:-1:-1 */ 0
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _2 := and(/** @src 29:16495:16516  "_nft.safeTransferFrom" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                /// @src 29:16450:16618  "for (uint256 i; i < numNFTs; ) {..."
+                for { }
+                /** @src 29:16466:16477  "i < numNFTs" */ lt(var_i, value2)
+                /// @src 29:16455:16464  "uint256 i"
+                { }
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    let returnValue := calldataload(/** @src 29:16540:16546  "ids[i]" */ calldata_array_index_access_uint256_dyn_calldata(value1, value2, var_i))
+                    /// @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])"
+                    if iszero(extcodesize(_2))
+                    {
+                        /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                        revert(/** @src -1:-1:-1 */ 0, 0)
+                    }
+                    /// @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])"
+                    let _3 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                    /// @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])"
+                    mstore(_3, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(225, 0x21421707))
+                    /// @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])"
+                    let _4 := call(gas(), _2, /** @src -1:-1:-1 */ 0, /** @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])" */ _3, sub(abi_encode_address_address_uint256(add(_3, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1), /** @src 29:16517:16527  "msg.sender" */ caller(), /** @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])" */ value_1, returnValue), _3), _3, /** @src -1:-1:-1 */ 0)
+                    /// @src 29:16495:16547  "_nft.safeTransferFrom(msg.sender, recipient, ids[i])"
+                    if iszero(_4) { revert_forward() }
+                    if _4
+                    {
+                        finalize_allocation_8360(_3)
+                        abi_decode(_3, _3)
+                    }
+                    /// @src 29:16590:16593  "++i"
+                    var_i := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ add(/** @src 29:16590:16593  "++i" */ var_i, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 1)
+                }
+                /// @src 29:16644:16752  "isPair(recipient, PairVariant.ENUMERABLE_ERC20) ||..."
+                let expr := /** @src 29:16644:16691  "isPair(recipient, PairVariant.ENUMERABLE_ERC20)" */ fun_isPair_8358(value_1)
+                /// @src 29:16644:16752  "isPair(recipient, PairVariant.ENUMERABLE_ERC20) ||..."
+                if iszero(expr)
+                {
+                    expr := /** @src 29:16707:16752  "isPair(recipient, PairVariant.ENUMERABLE_ETH)" */ fun_isPair_8362(value_1)
+                }
+                /// @src 29:16644:16823  "isPair(recipient, PairVariant.ENUMERABLE_ERC20) ||..."
+                let expr_1 := expr
+                if iszero(expr)
+                {
+                    expr_1 := /** @src 29:16768:16823  "isPair(recipient, PairVariant.MISSING_ENUMERABLE_ERC20)" */ fun_isPair_8359(value_1)
+                }
+                /// @src 29:16644:16892  "isPair(recipient, PairVariant.ENUMERABLE_ERC20) ||..."
+                let expr_2 := expr_1
+                if iszero(expr_1)
+                {
+                    expr_2 := /** @src 29:16839:16892  "isPair(recipient, PairVariant.MISSING_ENUMERABLE_ETH)" */ fun_isPair_8364(value_1)
+                }
+                /// @src 29:16627:16954  "if (..."
+                if expr_2
+                {
+                    /// @src 29:16922:16943  "NFTDeposit(recipient)"
+                    let _5 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                    /// @src 29:16922:16943  "NFTDeposit(recipient)"
+                    log1(_5, sub(abi_encode_contract_LSSVMPairERC20(_5, value_1), _5), 0x4fd0cd7c14badac45ff0bee670a9d8dd80e87907afcf2c121e0fd4b8b4b0047f)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function validator_revert_bool(value)
+            {
+                if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }
+            }
+            function external_fun_setBondingCurveAllowed()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 64)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                let value_1 := calldataload(36)
+                validator_revert_bool(value_1)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := and(value, sub(shl(160, 1), 1))
+                mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                mstore(32, /** @src 29:12768:12787  "bondingCurveAllowed" */ 0x03)
+                /// @src 29:12768:12813  "bondingCurveAllowed[bondingCurve] = isAllowed"
+                update_storage_value_offsett_bool_to_bool(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 64), /** @src 29:12768:12813  "bondingCurveAllowed[bondingCurve] = isAllowed" */ value_1)
+                /// @src 29:12828:12877  "BondingCurveStatusUpdate(bondingCurve, isAllowed)"
+                let _2 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                mstore(_2, _1)
+                mstore(add(_2, 32), iszero(iszero(value_1)))
+                /// @src 29:12828:12877  "BondingCurveStatusUpdate(bondingCurve, isAllowed)"
+                log1(_2, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 64, /** @src 29:12828:12877  "BondingCurveStatusUpdate(bondingCurve, isAllowed)" */ 0x1da28d127ec72d2dde6a533c98857664b25cd827680fb1f39f57394c2b444d91)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function external_fun_missingEnumerableERC20Template()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let memPos := mload(64)
+                mstore(memPos, and(/** @src 29:2024:2111  "LSSVMPairMissingEnumerableERC20..." */ loadimmutable("27867"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)))
+                return(memPos, 32)
+            }
+            function external_fun_changeProtocolFeeRecipient()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := and(/** @src 29:11733:11768  "_protocolFeeRecipient != address(0)" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                if /** @src 29:11733:11768  "_protocolFeeRecipient != address(0)" */ iszero(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 9)
+                    mstore(add(memPtr, 68), "0 address")
+                    revert(memPtr, 100)
+                }
+                sstore(/** @src 29:11792:11836  "protocolFeeRecipient = _protocolFeeRecipient" */ 0x01, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ or(and(sload(/** @src 29:11792:11836  "protocolFeeRecipient = _protocolFeeRecipient" */ 0x01), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ shl(160, 0xffffffffffffffffffffffff)), _1))
+                /// @src 29:11851:11900  "ProtocolFeeRecipientUpdate(_protocolFeeRecipient)"
+                let _2 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                /// @src 29:11851:11900  "ProtocolFeeRecipientUpdate(_protocolFeeRecipient)"
+                log1(_2, sub(abi_encode_contract_LSSVMPairERC20(_2, value), _2), 0xceec08a75d1f3b12c14c6cdc16c081aec1c401c2eac1d8c6ea91e9d73b929211)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function abi_encode_contract_LSSVMPairERC20(headStart, value0) -> tail
+            {
+                tail := add(headStart, 32)
+                mstore(headStart, and(value0, sub(shl(160, 1), 1)))
+            }
+            function external_fun_createPairERC20()
+            {
+                if callvalue() { revert(0, 0) }
+                let _1 := not(3)
+                if slt(add(calldatasize(), _1), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let offset := calldataload(4)
+                if gt(offset, 0xffffffffffffffff)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _2 := add(4, offset)
+                if slt(add(sub(calldatasize(), offset), _1), 320)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:7759:7778  "params.bondingCurve"
+                let _3 := add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:7759:7778  "params.bondingCurve" */ 68)
+                /// @src 29:7718:7834  "require(..."
+                require_helper_stringliteral_1c6f(/** @src 29:7739:7779  "bondingCurveAllowed[params.bondingCurve]" */ read_from_storage_split_offset_bool(mapping_index_access_mapping_address_bool_of_address(/** @src 29:7759:7778  "params.bondingCurve" */ read_from_calldatat_contract_ICurve(_3))))
+                /// @src 29:7935:7951  "address template"
+                let var_template := /** @src -1:-1:-1 */ 0
+                /// @src 29:7981:7991  "params.nft"
+                let _4 := add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:7981:7991  "params.nft" */ 36)
+                /// @src 29:7965:8011  "IERC165(address(params.nft)).supportsInterface"
+                let expr_address := convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:7965:7993  "IERC165(address(params.nft))" */ convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:7973:7992  "address(params.nft)" */ convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:7981:7991  "params.nft" */ read_from_calldatat_contract_ICurve(_4))))
+                /// @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                let _5 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(/** @src 29:7759:7778  "params.bondingCurve" */ 64)
+                /// @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                mstore(_5, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(224, 0x01ffc9a7))
+                /// @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                let trySuccessCondition := staticcall(gas(), expr_address, _5, sub(abi_encode_bytes4(add(_5, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 4)), /** @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)" */ _5), _5, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32)
+                /// @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                let expr := /** @src -1:-1:-1 */ var_template
+                /// @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                if trySuccessCondition
+                {
+                    let _6 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32
+                    /// @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                    if gt(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _6, /** @src 29:7965:8043  "IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)" */ returndatasize()) { _6 := returndatasize() }
+                    finalize_allocation(_5, _6)
+                    expr := abi_decode_bool_fromMemory(_5, add(_5, _6))
+                }
+                /// @src 29:7961:8287  "try IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE) returns (bool isEnumerable) {..."
+                switch iszero(trySuccessCondition)
+                case 0 {
+                    /// @src 29:8095:8196  "isEnumerable ? address(enumerableERC20Template)..."
+                    let expr_1 := /** @src -1:-1:-1 */ var_template
+                    /// @src 29:8095:8196  "isEnumerable ? address(enumerableERC20Template)..."
+                    switch expr
+                    case 0 {
+                        expr_1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:8165:8195  "missingEnumerableERC20Template" */ loadimmutable("27867"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                    }
+                    default /// @src 29:8095:8196  "isEnumerable ? address(enumerableERC20Template)..."
+                    {
+                        expr_1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:8118:8141  "enumerableERC20Template" */ loadimmutable("27864"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                    }
+                    /// @src 29:8084:8196  "template = isEnumerable ? address(enumerableERC20Template)..."
+                    var_template := expr_1
+                }
+                default /// @src 29:7961:8287  "try IERC165(address(params.nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE) returns (bool isEnumerable) {..."
+                {
+                    /// @src 29:8226:8276  "template = address(missingEnumerableERC20Template)"
+                    var_template := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:8245:8275  "missingEnumerableERC20Template" */ loadimmutable("27867"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                }
+                /// @src 29:8428:8447  "params.bondingCurve"
+                let expr_address_1 := read_from_calldatat_contract_ICurve(_3)
+                /// @src 29:8469:8479  "params.nft"
+                let expr_address_2 := read_from_calldatat_contract_ICurve(_4)
+                /// @src 29:8507:8522  "params.poolType"
+                let _7 := read_from_calldatat_enum_PoolType(add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8507:8522  "params.poolType" */ 132))
+                /// @src 29:1676:1711  "type(IERC721Enumerable).interfaceId"
+                validator_assert_enum_PoolType(_7)
+                /// @src 29:8297:8599  "pair = LSSVMPairERC20(..."
+                let var_pair_address := /** @src 29:8304:8599  "LSSVMPairERC20(..." */ convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:8332:8589  "payable(..." */ convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:8357:8575  "template.cloneERC20Pair(..." */ fun_cloneERC20Pair(var_template, /** @src 29:8402:8406  "this" */ address(), /** @src 29:8357:8575  "template.cloneERC20Pair(..." */ expr_address_1, expr_address_2, _7, /** @src 29:8545:8557  "params.token" */ read_from_calldatat_contract_ICurve(_2))))
+                /// @src 29:8662:8674  "params.token"
+                let expr_address_3 := read_from_calldatat_contract_ICurve(_2)
+                /// @src 29:8688:8698  "params.nft"
+                let expr_address_4 := read_from_calldatat_contract_ICurve(_4)
+                /// @src 29:8712:8733  "params.assetRecipient"
+                let expr_2 := read_from_calldatat_contract_ICurve(add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8712:8733  "params.assetRecipient" */ 100))
+                /// @src 29:8747:8759  "params.delta"
+                let expr_3 := read_from_calldatat_uint128(add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8747:8759  "params.delta" */ 164))
+                /// @src 29:8773:8783  "params.fee"
+                let expr_4 := read_from_calldatat_uint96(add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8773:8783  "params.fee" */ 196))
+                /// @src 29:8797:8813  "params.spotPrice"
+                let expr_5 := read_from_calldatat_uint128(add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8797:8813  "params.spotPrice" */ 228))
+                /// @src 29:8827:8847  "params.initialNFTIDs"
+                let expr_offset, expr_length := access_calldata_tail_array_uint256_dyn_calldata(_2, add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8827:8847  "params.initialNFTIDs" */ 260))
+                /// @src 29:8861:8887  "params.initialTokenBalance"
+                fun_initializePairERC20(var_pair_address, expr_address_3, expr_address_4, expr_2, expr_3, expr_4, expr_5, expr_offset, expr_length, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ calldataload(/** @src 29:8861:8887  "params.initialTokenBalance" */ add(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ offset, /** @src 29:8861:8887  "params.initialTokenBalance" */ 292)))
+                /// @src 29:8912:8934  "NewPair(address(pair))"
+                let _8 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(/** @src 29:7759:7778  "params.bondingCurve" */ 64)
+                /// @src 29:8912:8934  "NewPair(address(pair))"
+                log1(_8, sub(abi_encode_contract_LSSVMPairERC20(_8, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:8920:8933  "address(pair)" */ var_pair_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))), /** @src 29:8912:8934  "NewPair(address(pair))" */ _8), 0xf5bdc103c3e68a20d5f97d2d46792d3fdddfa4efeb6761f8141e6a7b936ca66c)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let memPos := mload(/** @src 29:7759:7778  "params.bondingCurve" */ 64)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(memPos, sub(abi_encode_contract_LSSVMPairERC20(memPos, var_pair_address), memPos))
+            }
+            function external_fun_protocolFeeRecipient()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let value := and(sload(/** @src 29:2117:2169  "address payable public override protocolFeeRecipient" */ 1), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                let memPos := mload(64)
+                mstore(memPos, value)
+                return(memPos, 32)
+            }
+            function external_fun_setRouterAllowed()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 64)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                let value_1 := calldataload(36)
+                validator_revert_bool(value_1)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:13968:14068  "if (isAllowed) {..."
+                if value_1
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:14018:14034  "address(_router)" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)))
+                    mstore(32, 4)
+                    /// @src 29:13997:14057  "require(!callAllowed[address(_router)], \"Can't call router\")"
+                    require_helper_stringliteral_e92b(/** @src 29:14005:14035  "!callAllowed[address(_router)]" */ iszero(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(sload(keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 64)), 0xff)))
+                }
+                let memPtr := mload(64)
+                finalize_allocation_8367(memPtr)
+                mstore(memPtr, iszero(iszero(value_1)))
+                mstore(/** @src 29:14101:14191  "RouterStatus({..." */ add(memPtr, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32), /** @src 29:14176:14180  "true" */ 0x01)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                copy_struct_to_storage_from_struct_RouterStatus_to_struct_RouterStatus(/** @src 29:14077:14098  "routerStatus[_router]" */ mapping_index_access_mapping_address_bool_of_address_8368(value), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ memPtr)
+                /// @src 29:14207:14245  "RouterStatusUpdate(_router, isAllowed)"
+                let _1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                /// @src 29:14207:14245  "RouterStatusUpdate(_router, isAllowed)"
+                log1(_1, sub(abi_encode_contract_LSSVMRouter_bool(_1, value, value_1), _1), 0x24e274cfd23919da24a57044266685f5474338837aecdcca3136b2102f78fee5)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function external_fun_renounceOwnership()
+            {
+                if callvalue() { revert(0, 0) }
+                let _1 := 0
+                if slt(add(calldatasize(), not(3)), _1) { revert(_1, _1) }
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _2 := sload(_1)
+                sstore(_1, and(_2, shl(160, 0xffffffffffffffffffffffff)))
+                let _3 := mload(64)
+                /// @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)"
+                log3(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _3, _1, /** @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)" */ 0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(_2, sub(shl(160, 1), 1)), _1)
+                return(_3, _1)
+            }
+            function external_fun_owner()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let value := and(sload(0), sub(shl(160, 1), 1))
+                let memPos := mload(64)
+                mstore(memPos, value)
+                return(memPos, 32)
+            }
+            function external_fun_changeProtocolFeeMultiplier()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value0 := calldataload(4)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1763:1770  "0.10e18"
+                if /** @src 29:12210:12252  "_protocolFeeMultiplier <= MAX_PROTOCOL_FEE" */ gt(value0, /** @src 29:1763:1770  "0.10e18" */ 0x016345785d8a0000)
+                {
+                    let memPtr := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                    /// @src 29:1763:1770  "0.10e18"
+                    mstore(memPtr, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ shl(229, 4594637))
+                    /// @src 29:1763:1770  "0.10e18"
+                    mstore(add(memPtr, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 4), 32)
+                    mstore(/** @src 29:1763:1770  "0.10e18" */ add(memPtr, 36), 13)
+                    mstore(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ add(/** @src 29:1763:1770  "0.10e18" */ memPtr, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 68), /** @src 29:1763:1770  "0.10e18" */ "Fee too large")
+                    revert(memPtr, 100)
+                }
+                sstore(/** @src 29:12280:12326  "protocolFeeMultiplier = _protocolFeeMultiplier" */ 0x02, /** @src 29:1763:1770  "0.10e18" */ value0)
+                /// @src 29:12341:12392  "ProtocolFeeMultiplierUpdate(_protocolFeeMultiplier)"
+                let _1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                mstore(_1, value0)
+                /// @src 29:12341:12392  "ProtocolFeeMultiplierUpdate(_protocolFeeMultiplier)"
+                log1(_1, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32, /** @src 29:12341:12392  "ProtocolFeeMultiplierUpdate(_protocolFeeMultiplier)" */ 0x7c5d30e0df5c540841a598b27bd89807223a2e6348125bb4aa74f1a8cb9ce768)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function external_fun_enumerableERC20Template()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let memPos := mload(64)
+                mstore(memPos, and(/** @src 29:1953:2018  "LSSVMPairEnumerableERC20 public immutable enumerableERC20Template" */ loadimmutable("27864"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)))
+                return(memPos, 32)
+            }
+            function external_fun_bondingCurveAllowed()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(value, sub(shl(160, 1), 1)))
+                mstore(32, /** @src 29:2258:2308  "mapping(ICurve => bool) public bondingCurveAllowed" */ 3)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value_1 := and(sload(keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 0x40)), 0xff)
+                let memPos := mload(0x40)
+                mstore(memPos, iszero(iszero(value_1)))
+                return(memPos, 32)
+            }
+            function read_from_storage_split_offset_bool(slot) -> value
+            {
+                value := and(sload(slot), 0xff)
+            }
+            function external_fun_routerStatus()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(value, sub(shl(160, 1), 1)))
+                mstore(32, /** @src 29:2455:2520  "mapping(LSSVMRouter => RouterStatus) public override routerStatus" */ 5)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := sload(keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 0x40))
+                let memPos := mload(0x40)
+                mstore(memPos, iszero(iszero(and(_1, 0xff))))
+                mstore(add(memPos, 32), iszero(iszero(and(shr(8, _1), 0xff))))
+                return(memPos, 0x40)
+            }
+            function external_fun_enumerableETHTemplate()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                let memPos := mload(64)
+                mstore(memPos, and(/** @src 29:1805:1866  "LSSVMPairEnumerableETH public immutable enumerableETHTemplate" */ loadimmutable("27858"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)))
+                return(memPos, 32)
+            }
+            function external_fun_withdrawETHProtocolFees()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 0) { revert(0, 0) }
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := and(sload(/** @src 29:10980:11000  "protocolFeeRecipient" */ 0x01), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                /// @src 29:11017:11038  "address(this).balance"
+                fun_safeTransferETH(value, selfbalance())
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(64), 0)
+            }
+            function external_fun_withdrawERC20ProtocolFees()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 64)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value_1 := and(sload(/** @src 29:11396:11416  "protocolFeeRecipient" */ 0x01), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                /// @src 21:2539:3355  "assembly {..."
+                let usr$freeMemoryPointer := mload(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 64)
+                /// @src 21:2539:3355  "assembly {..."
+                mstore(usr$freeMemoryPointer, shl(224, 0xa9059cbb))
+                mstore(add(usr$freeMemoryPointer, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 4), /** @src 21:2539:3355  "assembly {..." */ value_1)
+                mstore(add(usr$freeMemoryPointer, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 36), calldataload(36))
+                if iszero(/** @src 21:3373:3417  "didLastOptionalReturnCallSucceed(callStatus)" */ fun_didLastOptionalReturnCallSucceed(/** @src 21:2539:3355  "assembly {..." */ call(gas(), value, /** @src -1:-1:-1 */ 0, /** @src 21:2539:3355  "assembly {..." */ usr$freeMemoryPointer, 68, /** @src -1:-1:-1 */ 0, 0)))
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 15)
+                    mstore(add(memPtr, /** @src 21:2539:3355  "assembly {..." */ 68), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ "TRANSFER_FAILED")
+                    revert(memPtr, 100)
+                }
+                return(mload(64), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function validator_revert_enum_PoolType(value)
+            {
+                if iszero(lt(value, 3)) { revert(0, 0) }
+            }
+            function validator_revert_uint128(value)
+            {
+                if iszero(eq(value, and(value, 0xffffffffffffffffffffffffffffffff))) { revert(0, 0) }
+            }
+            function validator_revert_uint96(value)
+            {
+                if iszero(eq(value, and(value, 0xffffffffffffffffffffffff))) { revert(0, 0) }
+            }
+            function external_fun_createPairETH()
+            {
+                if slt(add(calldatasize(), not(3)), 256)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                let value_1 := calldataload(36)
+                validator_revert_address(value_1)
+                let value_2 := calldataload(68)
+                validator_revert_address(value_2)
+                let value_3 := calldataload(100)
+                validator_revert_enum_PoolType(value_3)
+                let value_4 := calldataload(132)
+                validator_revert_uint128(value_4)
+                let value_5 := calldataload(164)
+                validator_revert_uint96(value_5)
+                let value_6 := calldataload(196)
+                validator_revert_uint128(value_6)
+                let offset := calldataload(228)
+                if gt(offset, 0xffffffffffffffff)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value7, value8 := abi_decode_array_uint256_dyn_calldata(add(4, offset), calldatasize())
+                /// @src 29:5135:5245  "require(..."
+                require_helper_stringliteral_1c6f(/** @src 29:5156:5190  "bondingCurveAllowed[_bondingCurve]" */ read_from_storage_split_offset_bool(mapping_index_access_mapping_address_bool_of_address(value_1)))
+                /// @src 29:5354:5370  "address template"
+                let var_template := /** @src -1:-1:-1 */ 0
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := sub(shl(160, 1), 1)
+                /// @src 29:5384:5456  "IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                let _2 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                /// @src 29:5384:5456  "IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                mstore(_2, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(224, 0x01ffc9a7))
+                /// @src 29:5384:5456  "IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                let trySuccessCondition := staticcall(gas(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:5392:5405  "address(_nft)" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1), /** @src 29:5384:5456  "IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)" */ _2, sub(abi_encode_bytes4(add(_2, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 4)), /** @src 29:5384:5456  "IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)" */ _2), _2, 32)
+                let expr := /** @src -1:-1:-1 */ var_template
+                /// @src 29:5384:5456  "IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE)"
+                if trySuccessCondition
+                {
+                    let _3 := 32
+                    if gt(_3, returndatasize()) { _3 := returndatasize() }
+                    finalize_allocation(_2, _3)
+                    expr := abi_decode_bool_fromMemory(_2, add(_2, _3))
+                }
+                /// @src 29:5380:5694  "try IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE) returns (bool isEnumerable) {..."
+                switch iszero(trySuccessCondition)
+                case 0 {
+                    /// @src 29:5508:5605  "isEnumerable ? address(enumerableETHTemplate)..."
+                    let expr_1 := /** @src -1:-1:-1 */ var_template
+                    /// @src 29:5508:5605  "isEnumerable ? address(enumerableETHTemplate)..."
+                    switch expr
+                    case 0 {
+                        expr_1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:5576:5604  "missingEnumerableETHTemplate" */ loadimmutable("27861"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                    }
+                    default /// @src 29:5508:5605  "isEnumerable ? address(enumerableETHTemplate)..."
+                    {
+                        expr_1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:5531:5552  "enumerableETHTemplate" */ loadimmutable("27858"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                    }
+                    /// @src 29:5497:5605  "template = isEnumerable ? address(enumerableETHTemplate)..."
+                    var_template := expr_1
+                }
+                default /// @src 29:5380:5694  "try IERC165(address(_nft)).supportsInterface(INTERFACE_ID_ERC721_ENUMERABLE) returns (bool isEnumerable) {..."
+                {
+                    /// @src 29:5635:5683  "template = address(missingEnumerableETHTemplate)"
+                    var_template := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:5654:5682  "missingEnumerableETHTemplate" */ loadimmutable("27861"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                }
+                /// @src 29:1676:1711  "type(IERC721Enumerable).interfaceId"
+                validator_assert_enum_PoolType(value_3)
+                /// @src 29:5704:5950  "pair = LSSVMPairETH(..."
+                let var_pair_address := /** @src 29:5711:5950  "LSSVMPairETH(..." */ convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:5737:5940  "payable(..." */ convert_contract_LSSVMPairMissingEnumerableETH_to_address_payable(/** @src 29:5762:5926  "template.cloneETHPair(..." */ fun_cloneETHPair(var_template, /** @src 29:5805:5809  "this" */ address(), /** @src 29:5762:5926  "template.cloneETHPair(..." */ value_1, value, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ value_3)))
+                /// @src 29:6120:6134  "_initialNFTIDs"
+                fun_initializePairETH(var_pair_address, value, value_2, value_4, value_5, value_6, value7, value8)
+                /// @src 29:6159:6181  "NewPair(address(pair))"
+                let _4 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                /// @src 29:6159:6181  "NewPair(address(pair))"
+                log1(_4, sub(abi_encode_contract_LSSVMPairERC20(_4, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:6167:6180  "address(pair)" */ var_pair_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)), /** @src 29:6159:6181  "NewPair(address(pair))" */ _4), 0xf5bdc103c3e68a20d5f97d2d46792d3fdddfa4efeb6761f8141e6a7b936ca66c)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let memPos := mload(64)
+                return(memPos, sub(abi_encode_contract_LSSVMPairERC20(memPos, var_pair_address), memPos))
+            }
+            function external_fun_setCallAllowed()
+            {
+                if callvalue() { revert(0, 0) }
+                let _1 := 64
+                if slt(add(calldatasize(), not(3)), _1)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                let value_1 := calldataload(36)
+                validator_revert_bool(value_1)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:13320:13485  "if (isAllowed) {..."
+                if value_1
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:13388:13407  "LSSVMRouter(target)" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)))
+                    mstore(32, /** @src 29:13375:13387  "routerStatus" */ 0x05)
+                    /// @src 29:13349:13474  "require(..."
+                    require_helper_stringliteral_e92b(/** @src 29:13374:13423  "!routerStatus[LSSVMRouter(target)].wasEverAllowed" */ iszero(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(shr(8, sload(keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1))), 0xff)))
+                }
+                let _2 := and(value, sub(shl(160, 1), 1))
+                mstore(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _2)
+                mstore(32, 4)
+                /// @src 29:13495:13526  "callAllowed[target] = isAllowed"
+                update_storage_value_offsett_bool_to_bool(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ keccak256(/** @src -1:-1:-1 */ 0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1), /** @src 29:13495:13526  "callAllowed[target] = isAllowed" */ value_1)
+                /// @src 29:13541:13582  "CallTargetStatusUpdate(target, isAllowed)"
+                let _3 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(_1)
+                mstore(_3, _2)
+                mstore(add(_3, 32), iszero(iszero(value_1)))
+                /// @src 29:13541:13582  "CallTargetStatusUpdate(target, isAllowed)"
+                log1(_3, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1, /** @src 29:13541:13582  "CallTargetStatusUpdate(target, isAllowed)" */ 0xab2e2e8d21d5efbffb30945e9b6ee1fb43620ef65a228f871f5028bf8a6e004a)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(mload(_1), /** @src -1:-1:-1 */ 0)
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function external_fun_transferOwnership()
+            {
+                if callvalue() { revert(0, 0) }
+                if slt(add(calldatasize(), not(3)), 32)
+                {
+                    revert(/** @src -1:-1:-1 */ 0, 0)
+                }
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := calldataload(4)
+                validator_revert_address(value)
+                /// @src 7:1063:1125  "modifier onlyOwner() {..."
+                fun_checkOwner()
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := sub(shl(160, 1), 1)
+                let _2 := and(/** @src 7:2169:2191  "newOwner != address(0)" */ value, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                if /** @src 7:2169:2191  "newOwner != address(0)" */ iszero(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _2)
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 38)
+                    mstore(add(memPtr, 68), "Ownable: new owner is the zero a")
+                    mstore(add(memPtr, 100), "ddress")
+                    revert(memPtr, 132)
+                }
+                let _3 := sload(/** @src 7:2525:2531  "_owner" */ 0x00)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                sstore(/** @src 7:2525:2531  "_owner" */ 0x00, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ or(and(_3, shl(160, 0xffffffffffffffffffffffff)), _2))
+                let _4 := mload(64)
+                /// @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)"
+                log3(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _4, /** @src 7:2525:2531  "_owner" */ 0x00, /** @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)" */ 0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(_3, _1), /** @src 7:2573:2613  "OwnershipTransferred(oldOwner, newOwner)" */ _2)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                return(_4, /** @src 7:2525:2531  "_owner" */ 0x00)
+            }
+            /// @ast-id 23213 @src 7:1359:1489  "function _checkOwner() internal view virtual {..."
+            function fun_checkOwner()
+            {
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let value := and(sload(/** @src 7:1273:1279  "_owner" */ 0x00), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1))
+                if iszero(/** @src 7:1422:1445  "owner() == _msgSender()" */ eq(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ value, /** @src 15:719:729  "msg.sender" */ caller()))
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 32)
+                    mstore(add(memPtr, 68), "Ownable: caller is not the owner")
+                    revert(memPtr, 100)
+                }
+            }
+            function require_helper_stringliteral_1c6f(condition)
+            {
+                if iszero(condition)
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 29)
+                    mstore(add(memPtr, 68), "Bonding curve not whitelisted")
+                    revert(memPtr, 100)
+                }
+            }
+            /// @src 29:1676:1711  "type(IERC721Enumerable).interfaceId"
+            function finalize_allocation_8360(memPtr)
+            {
+                if gt(memPtr, 0xffffffffffffffff)
+                {
+                    mstore(0, shl(224, 0x4e487b71))
+                    mstore(4, 0x41)
+                    revert(0, 0x24)
+                }
+                mstore(64, memPtr)
+            }
+            function finalize_allocation_8367(memPtr)
+            {
+                let newFreePtr := add(memPtr, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 64)
+                /// @src 29:1676:1711  "type(IERC721Enumerable).interfaceId"
+                if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr))
+                {
+                    mstore(0, shl(224, 0x4e487b71))
+                    mstore(4, 0x41)
+                    revert(0, 0x24)
+                }
+                mstore(/** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 64, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ newFreePtr)
+            }
+            function finalize_allocation(memPtr, size)
+            {
+                let newFreePtr := add(memPtr, and(add(size, 31), not(31)))
+                if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr))
+                {
+                    mstore(0, shl(224, 0x4e487b71))
+                    mstore(4, 0x41)
+                    revert(0, 0x24)
+                }
+                mstore(64, newFreePtr)
+            }
+            function abi_decode_bool_fromMemory(headStart, dataEnd) -> value0
+            {
+                if slt(sub(dataEnd, headStart), 32)
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    revert(0, 0)
+                }
+                /// @src 29:1676:1711  "type(IERC721Enumerable).interfaceId"
+                let value := mload(headStart)
+                validator_revert_bool(value)
+                value0 := value
+            }
+            function abi_encode_bytes4(headStart) -> tail
+            {
+                tail := add(headStart, 32)
+                mstore(headStart, shl(224, 0x780e9d63))
+            }
+            function revert_forward()
+            {
+                let pos := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                /// @src 29:1676:1711  "type(IERC721Enumerable).interfaceId"
+                returndatacopy(pos, 0, returndatasize())
+                revert(pos, returndatasize())
+            }
+            function panic_error_0x21()
+            {
+                mstore(0, shl(224, 0x4e487b71))
+                mstore(4, 0x21)
+                revert(0, 0x24)
+            }
+            function validator_assert_enum_PoolType(value)
+            {
+                if iszero(lt(value, 3)) { panic_error_0x21() }
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function read_from_calldatat_contract_ICurve(ptr) -> returnValue
+            {
+                let value := calldataload(ptr)
+                validator_revert_address(value)
+                returnValue := value
+            }
+            function read_from_calldatat_enum_PoolType(ptr) -> returnValue
+            {
+                let value := calldataload(ptr)
+                validator_revert_enum_PoolType(value)
+                returnValue := value
+            }
+            function read_from_calldatat_uint128(ptr) -> returnValue
+            {
+                let value := calldataload(ptr)
+                validator_revert_uint128(value)
+                returnValue := value
+            }
+            function read_from_calldatat_uint96(ptr) -> returnValue
+            {
+                let value := calldataload(ptr)
+                validator_revert_uint96(value)
+                returnValue := value
+            }
+            function access_calldata_tail_array_uint256_dyn_calldata(base_ref, ptr_to_tail) -> addr, length
+            {
+                let rel_offset_of_tail := calldataload(ptr_to_tail)
+                if iszero(slt(rel_offset_of_tail, add(sub(calldatasize(), base_ref), not(30)))) { revert(0, 0) }
+                let addr_1 := add(base_ref, rel_offset_of_tail)
+                length := calldataload(addr_1)
+                if gt(length, 0xffffffffffffffff) { revert(0, 0) }
+                addr := add(addr_1, 0x20)
+                if sgt(addr, sub(calldatasize(), shl(5, length))) { revert(0, 0) }
+            }
+            function validator_assert_enum_PairVariant(value)
+            {
+                if iszero(lt(value, 4)) { panic_error_0x21() }
+            }
+            /// @ast-id 28323 @src 29:9299:10623  "function isPair(address potentialPair, PairVariant variant)..."
+            function fun_isPair_8358(var_potentialPair) -> var
+            {
+                /// @src 29:9500:9697  "return..."
+                var := /** @src 29:9523:9697  "LSSVMPairCloner.isERC20PairClone(..." */ fun_isERC20PairClone(/** @src 29:9585:9589  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:9620:9643  "enumerableERC20Template" */ loadimmutable("27864"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:9523:9697  "LSSVMPairCloner.isERC20PairClone(..." */ var_potentialPair)
+            }
+            /// @ast-id 28323 @src 29:9299:10623  "function isPair(address potentialPair, PairVariant variant)..."
+            function fun_isPair_8359(var_potentialPair) -> var
+            {
+                /// @src 29:9781:9985  "return..."
+                var := /** @src 29:9804:9985  "LSSVMPairCloner.isERC20PairClone(..." */ fun_isERC20PairClone(/** @src 29:9866:9870  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:9901:9931  "missingEnumerableERC20Template" */ loadimmutable("27867"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:9804:9985  "LSSVMPairCloner.isERC20PairClone(..." */ var_potentialPair)
+            }
+            /// @ast-id 28323 @src 29:9299:10623  "function isPair(address potentialPair, PairVariant variant)..."
+            function fun_isPair_8362(var_potentialPair) -> var
+            {
+                /// @src 29:10059:10252  "return..."
+                var := /** @src 29:10082:10252  "LSSVMPairCloner.isETHPairClone(..." */ fun_isETHPairClone(/** @src 29:10142:10146  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:10177:10198  "enumerableETHTemplate" */ loadimmutable("27858"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:10082:10252  "LSSVMPairCloner.isETHPairClone(..." */ var_potentialPair)
+            }
+            /// @ast-id 28323 @src 29:9299:10623  "function isPair(address potentialPair, PairVariant variant)..."
+            function fun_isPair_8364(var_potentialPair) -> var
+            {
+                /// @src 29:10334:10534  "return..."
+                var := /** @src 29:10357:10534  "LSSVMPairCloner.isETHPairClone(..." */ fun_isETHPairClone(/** @src 29:10417:10421  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:10452:10480  "missingEnumerableETHTemplate" */ loadimmutable("27861"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:10357:10534  "LSSVMPairCloner.isETHPairClone(..." */ var_potentialPair)
+            }
+            /// @ast-id 28323 @src 29:9299:10623  "function isPair(address potentialPair, PairVariant variant)..."
+            function fun_isPair(var_potentialPair, var_variant) -> var
+            {
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                validator_assert_enum_PairVariant(var_variant)
+                /// @src 29:9441:10617  "if (variant == PairVariant.ENUMERABLE_ERC20) {..."
+                switch /** @src 29:9445:9484  "variant == PairVariant.ENUMERABLE_ERC20" */ eq(var_variant, /** @src 29:9456:9484  "PairVariant.ENUMERABLE_ERC20" */ 2)
+                case /** @src 29:9441:10617  "if (variant == PairVariant.ENUMERABLE_ERC20) {..." */ 0 {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    validator_assert_enum_PairVariant(var_variant)
+                    /// @src 29:9714:10617  "if (variant == PairVariant.MISSING_ENUMERABLE_ERC20) {..."
+                    switch /** @src 29:9718:9765  "variant == PairVariant.MISSING_ENUMERABLE_ERC20" */ eq(var_variant, /** @src 29:9729:9765  "PairVariant.MISSING_ENUMERABLE_ERC20" */ 3)
+                    case /** @src 29:9714:10617  "if (variant == PairVariant.MISSING_ENUMERABLE_ERC20) {..." */ 0 {
+                        /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                        validator_assert_enum_PairVariant(var_variant)
+                        /// @src 29:10002:10617  "if (variant == PairVariant.ENUMERABLE_ETH) {..."
+                        switch /** @src 29:10006:10043  "variant == PairVariant.ENUMERABLE_ETH" */ iszero(var_variant)
+                        case /** @src 29:10002:10617  "if (variant == PairVariant.ENUMERABLE_ETH) {..." */ 0 {
+                            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                            validator_assert_enum_PairVariant(var_variant)
+                            /// @src 29:10269:10617  "if (variant == PairVariant.MISSING_ENUMERABLE_ETH) {..."
+                            switch /** @src 29:10273:10318  "variant == PairVariant.MISSING_ENUMERABLE_ETH" */ eq(var_variant, /** @src 29:10284:10318  "PairVariant.MISSING_ENUMERABLE_ETH" */ 1)
+                            case /** @src 29:10269:10617  "if (variant == PairVariant.MISSING_ENUMERABLE_ETH) {..." */ 0 {
+                                /// @src 29:10594:10606  "return false"
+                                var := /** @src -1:-1:-1 */ 0
+                                /// @src 29:10594:10606  "return false"
+                                leave
+                            }
+                            default /// @src 29:10269:10617  "if (variant == PairVariant.MISSING_ENUMERABLE_ETH) {..."
+                            {
+                                /// @src 29:10334:10534  "return..."
+                                var := /** @src 29:10357:10534  "LSSVMPairCloner.isETHPairClone(..." */ fun_isETHPairClone(/** @src 29:10417:10421  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:10452:10480  "missingEnumerableETHTemplate" */ loadimmutable("27861"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:10357:10534  "LSSVMPairCloner.isETHPairClone(..." */ var_potentialPair)
+                                /// @src 29:10334:10534  "return..."
+                                leave
+                            }
+                        }
+                        default /// @src 29:10002:10617  "if (variant == PairVariant.ENUMERABLE_ETH) {..."
+                        {
+                            /// @src 29:10059:10252  "return..."
+                            var := /** @src 29:10082:10252  "LSSVMPairCloner.isETHPairClone(..." */ fun_isETHPairClone(/** @src 29:10142:10146  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:10177:10198  "enumerableETHTemplate" */ loadimmutable("27858"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:10082:10252  "LSSVMPairCloner.isETHPairClone(..." */ var_potentialPair)
+                            /// @src 29:10059:10252  "return..."
+                            leave
+                        }
+                    }
+                    default /// @src 29:9714:10617  "if (variant == PairVariant.MISSING_ENUMERABLE_ERC20) {..."
+                    {
+                        /// @src 29:9781:9985  "return..."
+                        var := /** @src 29:9804:9985  "LSSVMPairCloner.isERC20PairClone(..." */ fun_isERC20PairClone(/** @src 29:9866:9870  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:9901:9931  "missingEnumerableERC20Template" */ loadimmutable("27867"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:9804:9985  "LSSVMPairCloner.isERC20PairClone(..." */ var_potentialPair)
+                        /// @src 29:9781:9985  "return..."
+                        leave
+                    }
+                }
+                default /// @src 29:9441:10617  "if (variant == PairVariant.ENUMERABLE_ERC20) {..."
+                {
+                    /// @src 29:9500:9697  "return..."
+                    var := /** @src 29:9523:9697  "LSSVMPairCloner.isERC20PairClone(..." */ fun_isERC20PairClone(/** @src 29:9585:9589  "this" */ address(), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ and(/** @src 29:9620:9643  "enumerableERC20Template" */ loadimmutable("27864"), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)), /** @src 29:9523:9697  "LSSVMPairCloner.isERC20PairClone(..." */ var_potentialPair)
+                    /// @src 29:9500:9697  "return..."
+                    leave
+                }
+            }
+            /// @ast-id 25276 @src 21:682:987  "function safeTransferETH(address to, uint256 amount) internal {..."
+            function fun_safeTransferETH(var_to, var_amount)
+            {
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                if iszero(/** @src 21:780:928  "assembly {..." */ call(gas(), var_to, var_amount, /** @src -1:-1:-1 */ 0, 0, 0, 0))
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 19)
+                    mstore(add(memPtr, 68), "ETH_TRANSFER_FAILED")
+                    revert(memPtr, 100)
+                }
+            }
+            /// @ast-id 25353 @src 21:4684:5725  "function didLastOptionalReturnCallSucceed(bool callStatus) private pure returns (bool success) {..."
+            function fun_didLastOptionalReturnCallSucceed(var_callStatus) -> var_success
+            {
+                /// @src 21:4789:5719  "assembly {..."
+                let usr$returnDataSize := returndatasize()
+                if iszero(var_callStatus)
+                {
+                    returndatacopy(0, 0, usr$returnDataSize)
+                    revert(0, usr$returnDataSize)
+                }
+                switch usr$returnDataSize
+                case 32 {
+                    returndatacopy(0, 0, 32)
+                    var_success := iszero(iszero(mload(0)))
+                }
+                case 0 { var_success := 1 }
+                default { var_success := 0 }
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function update_storage_value_offsett_bool_to_bool(slot, value)
+            {
+                let value_1 := and(sload(slot), not(255))
+                sstore(slot, or(value_1, and(iszero(iszero(value)), 255)))
+            }
+            function require_helper_stringliteral_e92b(condition)
+            {
+                if iszero(condition)
+                {
+                    let memPtr := mload(64)
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, 4), 32)
+                    mstore(add(memPtr, 36), 17)
+                    mstore(add(memPtr, 68), "Can't call router")
+                    revert(memPtr, 100)
+                }
+            }
+            function copy_struct_to_storage_from_struct_RouterStatus_to_struct_RouterStatus(slot, value)
+            {
+                update_storage_value_offsett_bool_to_bool(slot, iszero(iszero(mload(value))))
+                let cleaned := iszero(iszero(mload(add(value, 32))))
+                let _1 := sload(slot)
+                sstore(slot, or(and(_1, not(65280)), and(shl(8, cleaned), 65280)))
+            }
+            function abi_encode_contract_LSSVMRouter_bool(headStart, value0, value1) -> tail
+            {
+                tail := add(headStart, 64)
+                mstore(headStart, and(value0, sub(shl(160, 1), 1)))
+                mstore(add(headStart, 32), iszero(iszero(value1)))
+            }
+            function abi_encode_address_address_payable_uint128_uint96_uint128(headStart, value0, value1, value2, value3, value4) -> tail
+            {
+                tail := add(headStart, 160)
+                let _1 := sub(shl(160, 1), 1)
+                mstore(headStart, and(value0, _1))
+                mstore(add(headStart, 32), and(value1, _1))
+                let _2 := 0xffffffffffffffffffffffffffffffff
+                mstore(add(headStart, 64), and(value2, _2))
+                mstore(add(headStart, 96), and(value3, 0xffffffffffffffffffffffff))
+                mstore(add(headStart, 128), and(value4, _2))
+            }
+            function calldata_array_index_access_uint256_dyn_calldata(base_ref, length, index) -> addr
+            {
+                if iszero(lt(index, length))
+                {
+                    mstore(0, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(224, 0x4e487b71))
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    mstore(4, 0x32)
+                    revert(0, 0x24)
+                }
+                addr := add(base_ref, shl(5, index))
+            }
+            function abi_encode_address_address_uint256(headStart, value0, value1, value2) -> tail
+            {
+                tail := add(headStart, 96)
+                let _1 := sub(shl(160, 1), 1)
+                mstore(headStart, and(value0, _1))
+                mstore(add(headStart, 32), and(value1, _1))
+                mstore(add(headStart, 64), value2)
+            }
+            /// @ast-id 28590 @src 29:14301:15125  "function _initializePairETH(..."
+            function fun_initializePairETH(var_pair_address, var__nft_address, var_assetRecipient, var_delta, var_fee, var__spotPrice, var__initialNFTIDs_offset, var_initialNFTIDs_length)
+            {
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := sub(shl(160, 1), 1)
+                let _2 := and(/** @src 29:14588:14604  "_pair.initialize" */ var_pair_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                /// @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                if iszero(extcodesize(_2))
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    revert(0, 0)
+                }
+                let _3 := 64
+                /// @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                let _4 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(_3)
+                /// @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                mstore(_4, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(224, 0xfd17aef9))
+                /// @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                let _5 := 0
+                let _6 := 4
+                let _7 := call(gas(), _2, _5, _4, sub(abi_encode_address_address_payable_uint128_uint96_uint128(add(_4, _6), /** @src 29:14605:14615  "msg.sender" */ caller(), /** @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ var_assetRecipient, var_delta, var_fee, var__spotPrice), _4), _4, _5)
+                if iszero(_7) { revert_forward() }
+                if _7
+                {
+                    finalize_allocation_8360(_4)
+                    abi_decode(_4, _4)
+                }
+                /// @src 29:14750:14759  "msg.value"
+                fun_safeTransferETH(_2, callvalue())
+                /// @src 29:14878:14887  "uint256 i"
+                let var_i := /** @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _5
+                /// @src 29:14873:15119  "for (uint256 i; i < numNFTs; ) {..."
+                for { }
+                /** @src 29:14889:14900  "i < numNFTs" */ lt(var_i, var_initialNFTIDs_length)
+                /// @src 29:14878:14887  "uint256 i"
+                { }
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    let _8 := and(/** @src 29:14918:14939  "_nft.safeTransferFrom" */ var__nft_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                    let returnValue := calldataload(/** @src 29:15017:15034  "_initialNFTIDs[i]" */ calldata_array_index_access_uint256_dyn_calldata(var__initialNFTIDs_offset, var_initialNFTIDs_length, var_i))
+                    /// @src 29:14918:15048  "_nft.safeTransferFrom(..."
+                    if iszero(extcodesize(_8))
+                    {
+                        /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                        revert(/** @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _5, _5)
+                    }
+                    /// @src 29:14918:15048  "_nft.safeTransferFrom(..."
+                    let _9 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(_3)
+                    /// @src 29:14918:15048  "_nft.safeTransferFrom(..."
+                    mstore(_9, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(225, 0x21421707))
+                    /// @src 29:14918:15048  "_nft.safeTransferFrom(..."
+                    let _10 := call(gas(), _8, /** @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _5, /** @src 29:14918:15048  "_nft.safeTransferFrom(..." */ _9, sub(abi_encode_address_address_uint256(add(_9, /** @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _6), /** @src 29:14605:14615  "msg.sender" */ caller(), /** @src 29:14918:15048  "_nft.safeTransferFrom(..." */ _2, returnValue), _9), _9, /** @src 29:14588:14659  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _5)
+                    /// @src 29:14918:15048  "_nft.safeTransferFrom(..."
+                    if iszero(_10) { revert_forward() }
+                    if _10
+                    {
+                        finalize_allocation_8360(_9)
+                        abi_decode(_9, _9)
+                    }
+                    /// @src 29:15091:15094  "++i"
+                    var_i := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ add(/** @src 29:15091:15094  "++i" */ var_i, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 1)
+                }
+            }
+            /// @ast-id 28670 @src 29:15131:16091  "function _initializePairERC20(..."
+            function fun_initializePairERC20(var__pair_address, var_token_address, var_nft_28599_address, var__assetRecipient, var_delta, var__fee, var_spotPrice, var_initialNFTIDs_offset, var__initialNFTIDs_length, var_initialTokenBalance)
+            {
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                let _1 := sub(shl(160, 1), 1)
+                let _2 := and(/** @src 29:15482:15498  "_pair.initialize" */ var__pair_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                /// @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                if iszero(extcodesize(_2))
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    revert(0, 0)
+                }
+                /// @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                let _3 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                /// @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                mstore(_3, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(224, 0xfd17aef9))
+                /// @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)"
+                let _4 := 0
+                let _5 := 4
+                let _6 := call(gas(), _2, _4, _3, sub(abi_encode_address_address_payable_uint128_uint96_uint128(add(_3, _5), /** @src 29:15499:15509  "msg.sender" */ caller(), /** @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ var__assetRecipient, var_delta, var__fee, var_spotPrice), _3), _3, _4)
+                if iszero(_6) { revert_forward() }
+                if _6
+                {
+                    finalize_allocation_8360(_3)
+                    abi_decode(_3, _3)
+                }
+                /// @src 29:15696:15716  "_initialTokenBalance"
+                fun_safeTransferFrom(var_token_address, /** @src 29:15499:15509  "msg.sender" */ caller(), /** @src 29:15696:15716  "_initialTokenBalance" */ _2, var_initialTokenBalance)
+                /// @src 29:15844:15853  "uint256 i"
+                let var_i := /** @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _4
+                /// @src 29:15839:16085  "for (uint256 i; i < numNFTs; ) {..."
+                for { }
+                /** @src 29:15855:15866  "i < numNFTs" */ lt(var_i, var__initialNFTIDs_length)
+                /// @src 29:15844:15853  "uint256 i"
+                { }
+                {
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    let _7 := and(/** @src 29:15884:15905  "_nft.safeTransferFrom" */ var_nft_28599_address, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ _1)
+                    let returnValue := calldataload(/** @src 29:15983:16000  "_initialNFTIDs[i]" */ calldata_array_index_access_uint256_dyn_calldata(var_initialNFTIDs_offset, var__initialNFTIDs_length, var_i))
+                    /// @src 29:15884:16014  "_nft.safeTransferFrom(..."
+                    if iszero(extcodesize(_7))
+                    {
+                        /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                        revert(/** @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _4, _4)
+                    }
+                    /// @src 29:15884:16014  "_nft.safeTransferFrom(..."
+                    let _8 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ mload(64)
+                    /// @src 29:15884:16014  "_nft.safeTransferFrom(..."
+                    mstore(_8, /** @src 29:1676:1711  "type(IERC721Enumerable).interfaceId" */ shl(225, 0x21421707))
+                    /// @src 29:15884:16014  "_nft.safeTransferFrom(..."
+                    let _9 := call(gas(), _7, /** @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _4, /** @src 29:15884:16014  "_nft.safeTransferFrom(..." */ _8, sub(abi_encode_address_address_uint256(add(_8, /** @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _5), /** @src 29:15499:15509  "msg.sender" */ caller(), /** @src 29:15884:16014  "_nft.safeTransferFrom(..." */ _2, returnValue), _8), _8, /** @src 29:15482:15553  "_pair.initialize(msg.sender, _assetRecipient, _delta, _fee, _spotPrice)" */ _4)
+                    /// @src 29:15884:16014  "_nft.safeTransferFrom(..."
+                    if iszero(_9) { revert_forward() }
+                    if _9
+                    {
+                        finalize_allocation_8360(_8)
+                        abi_decode(_8, _8)
+                    }
+                    /// @src 29:16057:16060  "++i"
+                    var_i := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ add(/** @src 29:16057:16060  "++i" */ var_i, /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 1)
+                }
+            }
+            /// @ast-id 25300 @src 21:1177:2395  "function safeTransferFrom(..."
+            function fun_safeTransferFrom(var_token_25279_address, var_from, var_to, var_amount)
+            {
+                /// @src 21:1341:2301  "assembly {..."
+                let usr$freeMemoryPointer := mload(0x40)
+                mstore(usr$freeMemoryPointer, shl(224, 0x23b872dd))
+                let _1 := /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ sub(shl(160, 1), 1)
+                /// @src 21:1341:2301  "assembly {..."
+                mstore(add(usr$freeMemoryPointer, 4), and(var_from, _1))
+                mstore(add(usr$freeMemoryPointer, 36), and(var_to, _1))
+                mstore(add(usr$freeMemoryPointer, 68), var_amount)
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                if iszero(/** @src 21:2319:2363  "didLastOptionalReturnCallSucceed(callStatus)" */ fun_didLastOptionalReturnCallSucceed(/** @src 21:1341:2301  "assembly {..." */ call(gas(), var_token_25279_address, /** @src -1:-1:-1 */ 0, /** @src 21:1341:2301  "assembly {..." */ usr$freeMemoryPointer, 100, /** @src -1:-1:-1 */ 0, 0)))
+                /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                {
+                    let memPtr := mload(/** @src 21:1341:2301  "assembly {..." */ 0x40)
+                    /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+                    mstore(memPtr, shl(229, 4594637))
+                    mstore(add(memPtr, /** @src 21:1341:2301  "assembly {..." */ 4), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 32)
+                    mstore(add(memPtr, /** @src 21:1341:2301  "assembly {..." */ 36), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ 20)
+                    mstore(add(memPtr, /** @src 21:1341:2301  "assembly {..." */ 68), /** @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..." */ "TRANSFER_FROM_FAILED")
+                    revert(memPtr, /** @src 21:1341:2301  "assembly {..." */ 100)
+                }
+            }
+            /// @src 29:1421:17604  "contract LSSVMPairFactory is Ownable, ILSSVMPairFactoryLike {..."
+            function abi_decode_contract_ERC20_fromMemory(headStart, dataEnd) -> value0
+            {
+                if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }
+                let value := mload(headStart)
+                validator_revert_address(value)
+                value0 := value
+            }
+            /// @ast-id 31150 @src 37:676:6522  "function cloneETHPair(..."
+            function fun_cloneETHPair(var_implementation, var_factory_31135_address, var_bondingCurve_31138_address, var_nft_31141_address, var_poolType) -> var_instance
+            {
+                /// @src 37:895:6516  "assembly {..."
+                let usr$ptr := mload(0x40)
+                mstore(usr$ptr, "`r=\x81`\t=9\xf3====6==7`=`5696`=\x01=s\x00\x00\x00")
+                mstore(add(usr$ptr, 0x1d), shl(0x60, var_implementation))
+                mstore(add(usr$ptr, 0x31), "Z\xf4==\x93\x80>`3W\xfd[\xf3\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+                mstore(add(usr$ptr, 0x3e), shl(0x60, var_factory_31135_address))
+                mstore(add(usr$ptr, 0x52), shl(0x60, var_bondingCurve_31138_address))
+                mstore(add(usr$ptr, 0x66), shl(0x60, var_nft_31141_address))
+                mstore8(add(usr$ptr, 0x7a), var_poolType)
+                var_instance := create(0, usr$ptr, 0x7b)
+            }
+            /// @ast-id 31174 @src 37:6870:12792  "function cloneERC20Pair(..."
+            function fun_cloneERC20Pair(var_implementation, var_factory_address, var_bondingCurve_address, var_nft_address, var_poolType, var_token_31167_address) -> var_instance
+            {
+                /// @src 37:7112:12786  "assembly {..."
+                let usr$ptr := mload(0x40)
+                mstore(usr$ptr, "`\x86=\x81`\t=9\xf3====6==7`Q`5696`Q\x01=s\x00\x00\x00")
+                mstore(add(usr$ptr, 0x1d), shl(0x60, var_implementation))
+                mstore(add(usr$ptr, 0x31), "Z\xf4==\x93\x80>`3W\xfd[\xf3\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+                mstore(add(usr$ptr, 0x3e), shl(0x60, var_factory_address))
+                mstore(add(usr$ptr, 0x52), shl(0x60, var_bondingCurve_address))
+                mstore(add(usr$ptr, 0x66), shl(0x60, var_nft_address))
+                mstore8(add(usr$ptr, 0x7a), var_poolType)
+                mstore(add(usr$ptr, 0x7b), shl(0x60, var_token_31167_address))
+                var_instance := create(0, usr$ptr, 0x8f)
+            }
+            /// @ast-id 31188 @src 37:13198:14375  "function isETHPairClone(..."
+            function fun_isETHPairClone(var_factory, var_implementation, var_query) -> var_result
+            {
+                /// @src 37:13410:14369  "assembly {..."
+                let usr$ptr := mload(0x40)
+                mstore(usr$ptr, "====6==7`=`5696`=\x01=s\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+                mstore(add(usr$ptr, 0x14), shl(0x60, var_implementation))
+                mstore(add(usr$ptr, 0x28), "Z\xf4==\x93\x80>`3W\xfd[\xf3\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+                mstore(add(usr$ptr, 0x35), shl(0x60, var_factory))
+                let usr$other := add(usr$ptr, 0x49)
+                extcodecopy(var_query, usr$other, 0, 0x49)
+                var_result := and(eq(mload(usr$ptr), mload(usr$other)), and(eq(mload(add(usr$ptr, 0x20)), mload(add(usr$ptr, 105))), eq(mload(add(usr$ptr, 0x29)), mload(add(usr$ptr, 114)))))
+            }
+            /// @ast-id 31202 @src 37:14727:15906  "function isERC20PairClone(..."
+            function fun_isERC20PairClone(var_factory, var_implementation, var_query) -> var_result
+            {
+                /// @src 37:14941:15900  "assembly {..."
+                let usr$ptr := mload(0x40)
+                mstore(usr$ptr, "====6==7`Q`5696`Q\x01=s\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+                mstore(add(usr$ptr, 0x14), shl(0x60, var_implementation))
+                mstore(add(usr$ptr, 0x28), "Z\xf4==\x93\x80>`3W\xfd[\xf3\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+                mstore(add(usr$ptr, 0x35), shl(0x60, var_factory))
+                let usr$other := add(usr$ptr, 0x49)
+                extcodecopy(var_query, usr$other, 0, 0x49)
+                var_result := and(eq(mload(usr$ptr), mload(usr$other)), and(eq(mload(add(usr$ptr, 0x20)), mload(add(usr$ptr, 105))), eq(mload(add(usr$ptr, 0x29)), mload(add(usr$ptr, 114)))))
+            }
+        }
+        data ".metadata" hex"a2646970667358221220e86e8c2c7e7125cf522b1f378ff4133b523bcbc07ffe7ba2e1f2bc058e96570564736f6c63430008100033"
+    }
+}
+

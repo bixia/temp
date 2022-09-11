@@ -1,0 +1,9 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+openzeppelin-contracts-upgradeable/=lib/sudoswap/lib/openzeppelin-contracts-upgradeable/
+openzeppelin-contracts/=lib/sudoswap/lib/openzeppelin-contracts/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+prb-math/=lib/sudoswap/lib/prb-math/contracts/
+solmate/=lib/sudoswap/lib/solmate/src/
+sudoswap/=lib/sudoswap/src/
+weird-erc20/=lib/sudoswap/lib/solmate/lib/weird-erc20/src/
